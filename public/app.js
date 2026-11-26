@@ -508,7 +508,7 @@ function requestText(
   return new Promise((resolve) => {
     const d = document.createElement("dialog");
     d.className = "input-dialog";
-    d.innerHTML = `<form><div class="dialog-head"><div><span class="eyebrow">WORKSPACE SETUP</span><h2>${esc(
+    d.innerHTML = `<form><div class="dialog-head"><div><span class="eyebrow">${title.toLowerCase().includes("project") ? "NEW PROJECT" : "WORKSPACE SETUP"}</span><h2>${esc(
       title
     )}</h2></div><button type="button" class="dialog-close" data-cancel aria-label="Close">×</button></div><label>${esc(
       label
@@ -784,12 +784,12 @@ async function setupWorkspace(isNew = false) {
     $(".title-line h1").textContent = project.name;
     const breadcrumb = $(".breadcrumbs");
     if (breadcrumb) {
-      breadcrumb.firstChild.nodeValue = "Projects ";
+      breadcrumb.firstChild.nodeValue = team.name + " ";
       breadcrumb.querySelector("b").textContent = project.name;
     }
     const eyebrow = $(".project-heading .eyebrow");
     if (eyebrow?.childNodes[1])
-      eyebrow.childNodes[1].nodeValue = ` ${project.name.toUpperCase()} `;
+      eyebrow.childNodes[1].nodeValue = ` ${team.name.toUpperCase()} `;
     $(".subtitle").textContent =
       project.description ||
       "Plan, track, and collaborate on work across your team.";

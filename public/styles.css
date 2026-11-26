@@ -192,3 +192,21 @@ button:focus-visible,a:focus-visible{outline:3px solid #a899ed;outline-offset:2p
   .chat-panel.mobile-open{box-shadow:-12px 0 40px #201a3530}
   .sidebar.mobile-open{box-shadow:12px 0 40px #201a3530}
 }
+
+
+/* Dedicated layout for the create workspace/project dialog */
+.input-dialog{width:min(460px,calc(100% - 32px));padding:26px;border:1px solid #e8e5f0;border-radius:16px;background:#fff;box-shadow:0 24px 80px #211b3933}
+.input-dialog form{display:flex;flex-direction:column;gap:0}
+.input-dialog .dialog-head{align-items:center;margin-bottom:24px}
+.input-dialog .dialog-head h2{font-size:24px;line-height:1.25}
+.input-dialog form>label{display:flex;flex-direction:column;gap:9px;margin:0;color:#45455b;font-size:14px;font-weight:650}
+.input-dialog input[name="value"]{display:block;width:100%;min-height:48px;margin-top:2px;padding:11px 13px;border:1px solid #dfdeea;border-radius:10px;background:#fcfcfe;color:#303047;font:15px 'DM Sans',sans-serif;outline:0;transition:border-color .16s,box-shadow .16s,background .16s}
+.input-dialog input[name="value"]:hover{border-color:#c9c3dd}
+.input-dialog input[name="value"]:focus{border-color:#9b86e8;background:#fff;box-shadow:0 0 0 4px #7658e81a}
+.input-dialog .auth-error{margin:9px 0 0;color:#c34e59;font-size:13px;line-height:1.4}
+.input-dialog .auth-error:empty{display:none}
+.input-dialog .dialog-actions{gap:10px;margin-top:22px;padding-top:17px;border-top:1px solid #efedf4}
+.input-dialog .dialog-actions button{min-height:42px;padding:0 16px;border-radius:9px}
+.input-dialog .dialog-actions .cancel-button{border-color:#e5e3eb;color:#656579}
+.input-dialog .dialog-actions .primary-button{height:42px;box-shadow:0 5px 14px #7658e82e}
+@media(max-width:620px){.input-dialog{padding:21px;border-radius:14px}.input-dialog .dialog-head{margin-bottom:21px}.input-dialog .dialog-actions{margin-top:19px}}
