@@ -789,7 +789,7 @@ async function setupWorkspace(isNew = false) {
     }
     const eyebrow = $(".project-heading .eyebrow");
     if (eyebrow?.childNodes[1])
-      eyebrow.childNodes[1].nodeValue = ` ${team.name.toUpperCase()} `;
+      eyebrow.childNodes[1].nodeValue = ` ${project.name.toUpperCase()} `;
     $(".subtitle").textContent =
       project.description ||
       "Plan, track, and collaborate on work across your team.";
