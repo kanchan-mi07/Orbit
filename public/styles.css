@@ -93,11 +93,6 @@
   .nav-count,.projects .muted,.share-button,.primary-button,.action-menu button,.home-stats span,.home-add-project{font-size:15px}
 }
 
-/* Prevent the hard-coded starter board from flashing while the saved workspace loads. */
-.app-loading body{background:#f7f8fa}
-.app-loading .app{visibility:hidden}
-.app-loading body::before{content:"Loading your workspace…";position:fixed;inset:0;display:grid;place-items:center;padding:24px;color:#5f4bc0;font:600 16px 'DM Sans',sans-serif;background:#f7f8fa;z-index:9999}
-
 /* Project navigation and workspace polish */
 .nav.projects .active-project{background:#f1edff;color:#5d43cb;font-weight:700;box-shadow:inset 3px 0 #7658e8}
 .project-heading{position:relative;overflow:hidden;align-items:center;min-height:148px;padding:24px 26px;border:1px solid #e9e3ff;border-radius:16px;background:radial-gradient(ellipse at 90% 0%,#ede8ff 0,transparent 42%),linear-gradient(120deg,#fbfaff 0%,#fff 72%);box-shadow:0 8px 24px #4b3d7a0b}
@@ -210,3 +205,39 @@ button:focus-visible,a:focus-visible{outline:3px solid #a899ed;outline-offset:2p
 .input-dialog .dialog-actions .cancel-button{border-color:#e5e3eb;color:#656579}
 .input-dialog .dialog-actions .primary-button{height:42px;box-shadow:0 5px 14px #7658e82e}
 @media(max-width:620px){.input-dialog{padding:21px;border-radius:14px}.input-dialog .dialog-head{margin-bottom:21px}.input-dialog .dialog-actions{margin-top:19px}}
+
+
+/* Load the workspace immediately and keep board controls readable. */
+.project-meta .tabs .tab{font-size:17px;min-height:46px}
+.project-meta .tabs .tab span{font-size:16px;margin-left:7px}
+.heading-buttons #addTask{font-size:16px;min-height:44px;padding:0 16px}
+.heading-buttons #addTask span{font-size:20px}
+.column-head h2{font-size:17px}
+.column-count{font-size:14px;padding:4px 8px}
+.task-card h3{font-size:16px;line-height:1.5}
+.task-desc{font-size:14px;line-height:1.55}
+.tag{font-size:13px;padding:5px 9px}
+.task-date,.task-comments{font-size:14px}
+.add-card{font-size:16px;min-height:42px;padding:9px 12px}
+.add-card span{font-size:14px}
+.empty-state{font-size:14px;padding:20px 8px}
+.task-table th{font-size:14px;padding:14px}
+.task-table td{font-size:15px;padding:14px}
+.table-status{font-size:14px;padding:7px 9px}
+.timeline-task-heading{font-size:14px}
+.timeline-task button{font-size:15px;max-width:200px}
+.timeline-task small,.timeline-day,.timeline-day span,.timeline-outside{font-size:13px}
+.timeline-marker{font-size:13px;padding:5px 7px;max-width:100px}
+.timeline-empty,.timeline-note{font-size:14px}
+.file-card-copy>a{font-size:15px}
+.file-card-copy small{font-size:13px}
+.files-empty p{font-size:14px}
+@media(max-width:620px){
+  .project-meta .tabs .tab{font-size:17px;min-height:44px}
+  .project-meta .tabs .tab span{font-size:15px}
+  .heading-buttons #addTask{font-size:16px}
+  .column-head h2{font-size:17px}
+  .task-card h3{font-size:16px}
+  .task-date,.task-comments{font-size:13px}
+  .task-table th,.task-table td{padding:11px;font-size:14px}
+}
